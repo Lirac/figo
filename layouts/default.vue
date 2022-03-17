@@ -71,7 +71,7 @@ export default {
         {
           icon: 'mdi-send',
           title: 'Transfer Money',
-          to: '/inspire',
+          to: '#',
         },
         {
           icon: 'mdi-piggy-bank',

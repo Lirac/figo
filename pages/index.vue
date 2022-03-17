@@ -8,7 +8,7 @@
     <section class="block">
       <h3>Your wallet</h3>
       <v-row>
-        <v-col md="6" class="sm-12">
+        <v-col lg="6" md="6" sm="12">
           <v-card flat>
             <v-card-title>
               <p>Account balance</p>
@@ -50,7 +50,7 @@
       <h3>Coming features</h3>
       <v-row class="d-flex" justify="space-between">
         <v-col md="2">
-          <v-card flat>
+          <v-card flat class="features__card">
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
@@ -66,7 +66,7 @@
           </v-card>
         </v-col>
         <v-col md="2">
-          <v-card flat>
+          <v-card flat class="features__card">
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
@@ -81,8 +81,8 @@
             </div>
           </v-card>
         </v-col>
-        <v-col md="2">
-          <v-card flat>
+        <v-col md="2" class="coming-soon">
+          <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
@@ -98,7 +98,7 @@
           </v-card>
         </v-col>
         <v-col md="2">
-          <v-card flat>
+          <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
@@ -114,7 +114,7 @@
           </v-card>
         </v-col>
         <v-col md="2">
-          <v-card flat>
+          <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
@@ -135,8 +135,8 @@
 </template>
 
 <script>
-import welcomeBanner from '~/components/welcome-banner.vue'
-import cardAvatar from '~/components/card-avatar.vue'
+import welcomeBanner from '~/components/Welcome-banner.vue'
+import cardAvatar from '~/components/Card-avatar.vue'
 export default {
   components: [welcomeBanner, cardAvatar],
   data: () => {
@@ -178,11 +178,20 @@ export default {
 }
 .feature-action {
   background: #dfdfdf;
-  padding: 0.1rem;
   color: var(--color-heading);
+  justify-self: flex-end;
 }
 .features__text {
   opacity: 0.6;
   font-weight: 500;
+  justify-content: center;
+}
+
+.features__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  justify-content: space-between;
 }
 </style>
