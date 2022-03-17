@@ -59,7 +59,7 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-view-dashboard',
           title: 'Dashboard',
           to: '/',
         },
@@ -98,9 +98,6 @@ export default {
 }
 </script>
 <style scoped>
-.heading__2 {
-  color: red !important;
-}
 .list_item {
   margin: 1rem 1rem;
 }
