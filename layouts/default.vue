@@ -37,15 +37,15 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
+    <v-navigation-drawer v-model="rightDrawer" :right="right" app>
+      <div class="text-center right-drawer__container">
+        <v-icon class="account-icon">mdi-account-circle</v-icon>
+
+        <v-icon class="ml-8">mdi-dots-vertical</v-icon>
+
+        <h3 class="mt-10">Transaction History</h3>
+        <p class="transaction-status mt-16">You have no transactions yet</p>
+      </div>
     </v-navigation-drawer>
   </v-app>
 </template>
@@ -112,5 +112,18 @@ export default {
 
 .page-container {
   padding-top: 2rem;
+}
+.right-drawer__container {
+  padding: 3rem 2.5rem;
+}
+
+.account-icon {
+  color: var(--color-heading);
+}
+
+.transaction-status {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.5;
 }
 </style>
