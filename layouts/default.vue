@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" fixed app>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list-item class="mb-10">
         <v-list-item-avatar>
           <img src="~/assets/img/avatar.svg" />
@@ -25,7 +25,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed flat app>
+    <v-app-bar dense fixed flat app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
@@ -33,7 +33,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="page-container">
         <nuxt />
       </v-container>
     </v-main>
@@ -47,9 +47,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -74,17 +71,17 @@ export default {
         {
           icon: 'mdi-send',
           title: 'Transfer Money',
-          to: '',
+          to: '#',
         },
         {
           icon: 'mdi-piggy-bank',
           title: 'Save Money',
-          to: '',
+          to: 's',
         },
         {
           icon: 'mdi-wallet',
           title: 'Wallet',
-          to: '',
+          to: 't',
         },
         {
           icon: 'mdi-cart',
@@ -92,7 +89,7 @@ export default {
           to: '',
         },
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js',
@@ -101,10 +98,22 @@ export default {
 }
 </script>
 <style scoped>
+.heading__2 {
+  color: red !important;
+}
 .list_item {
   margin: 1rem 1rem;
 }
 .list_item_active {
   background: #6eb04d;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.list_item_active .v-list-item__action {
+  margin: 0 2rem 0 0;
+}
+
+.page-container {
+  padding-top: 2rem;
 }
 </style>
