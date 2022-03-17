@@ -251,8 +251,8 @@
             <v-stepper-content step="3">
               <v-card flat class="mb-12 stepper__content">
                 <v-form>
-                  <v-row dense class="mt-4">
-                    <v-col md="5" sm="12">
+                  <v-row class="mt-6">
+                    <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
                           <label class="input__label"
@@ -263,7 +263,7 @@
                             placeholder="123456789098"
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="12" class="text-right">
+                        <v-col cols="12" class="text-right d-none d-md-block">
                           <v-btn
                             depressed
                             outlined
@@ -274,7 +274,14 @@
                         </v-col>
                       </v-row>
                     </v-col>
-                    <v-col md="5" offset-md="1" class="d-flex align-end">
+                    <v-col cols="12" md="6" class="d-flex align-end">
+                      <v-btn
+                        depressed
+                        outlined
+                        class="text-capitalize d-sm-none mr-1"
+                        @click="e1 = 2"
+                        >Back</v-btn
+                      >
                       <v-btn
                         color="#86b052"
                         class="text-capitalize white--text"
