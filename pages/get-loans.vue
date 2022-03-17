@@ -1,9 +1,11 @@
 <template>
   <div>
     <v-row>
-      <h2 v-if="e1 === 1">Basic information</h2>
-      <h2 v-if="e1 === 2">Work information</h2>
-      <h2 v-if="e1 === 3">BVN Authentication</h2>
+      <v-col>
+        <h2 v-if="e1 === 1">Basic information</h2>
+        <h2 v-if="e1 === 2">Work information</h2>
+        <h2 v-if="e1 === 3">BVN Authentication</h2>
+      </v-col>
     </v-row>
     <v-row>
       <v-col cols="12">
@@ -37,16 +39,18 @@
               <v-card flat class="mb-12 stepper__content">
                 <v-form>
                   <v-row class="mt-4">
-                    <v-col md="5">
-                      <label class="input__label">Full name *</label>
-                      <v-text-field
-                        required
-                        outlined
-                        placeholder="Enter your full name"
-                      >
-                      </v-text-field>
+                    <v-col cols="12" md="6">
+                      <v-col cols="12">
+                        <label class="input__label">Full name *</label>
+                        <v-text-field
+                          required
+                          outlined
+                          placeholder="Enter your full name"
+                        >
+                        </v-text-field>
+                      </v-col>
 
-                      <div class="">
+                      <v-col cols="12">
                         <label class="input__label" for="">Gender *</label>
                         <v-btn-toggle
                           mandatory
@@ -56,9 +60,9 @@
                           <v-btn class="toggle__btn mr-4">Male</v-btn>
                           <v-btn class="toggle__btn">Female</v-btn>
                         </v-btn-toggle>
-                      </div>
+                      </v-col>
 
-                      <div class="mt-8">
+                      <v-col cols="12">
                         <label class="input__label" for=""
                           >Date of Birth *</label
                         >
@@ -86,10 +90,10 @@
                             @input="menu = false"
                           />
                         </v-menu>
-                      </div>
+                      </v-col>
                     </v-col>
-                    <v-col md="5" offset-md="1">
-                      <div>
+                    <v-col cols="12" md="6">
+                      <v-col cols="12">
                         <label class="input__label" for=""
                           >Email Address *</label
                         >
@@ -99,9 +103,8 @@
                           placeholder="Enter your email"
                         >
                         </v-text-field>
-                      </div>
-
-                      <div>
+                      </v-col>
+                      <v-col cols="12">
                         <label class="input__label" for=""
                           >Home Address *</label
                         >
@@ -110,16 +113,17 @@
                           required
                           placeholder="Enter your home address"
                         ></v-textarea>
-                      </div>
-
-                      <v-btn
-                        color="success"
-                        class="text-capitalize"
-                        depressed
-                        @click="e1 = 2"
-                      >
-                        next</v-btn
-                      >
+                      </v-col>
+                      <v-col col="12">
+                        <v-btn
+                          color="#86b052"
+                          class="text-capitalize white--text"
+                          depressed
+                          @click="e1 = 2"
+                        >
+                          next</v-btn
+                        >
+                      </v-col>
                     </v-col>
                   </v-row>
                 </v-form>
@@ -130,7 +134,7 @@
               <v-card flat class="mb-12 stepper__content">
                 <v-form>
                   <v-row dense class="mt-4">
-                    <v-col md="5" sm="12">
+                    <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
                           <label class="input__label"
@@ -160,7 +164,7 @@
                             placeholder="Enter job title"
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="12" class="text-right">
+                        <v-col cols="12" class="text-right d-none d-md-block">
                           <v-btn
                             depressed
                             outlined
@@ -222,8 +226,15 @@
                         </v-col>
                         <v-col col="12">
                           <v-btn
-                            color="success"
-                            class="text-capitalize"
+                            depressed
+                            outlined
+                            class="text-capitalize d-sm-none"
+                            @click="e1 = 1"
+                            >Back</v-btn
+                          >
+                          <v-btn
+                            color="#86b052"
+                            class="text-capitalize white--text"
                             depressed
                             @click="e1 = 3"
                           >

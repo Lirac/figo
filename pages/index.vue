@@ -1,14 +1,16 @@
 <template>
   <div>
     <v-row>
-      <h2>Hello Frank.</h2>
-      <welcome-banner></welcome-banner>
+      <v-col cols="12">
+        <h2>Hello Frank.</h2>
+        <welcome-banner></welcome-banner>
+      </v-col>
     </v-row>
 
     <section class="block">
       <h3>Your wallet</h3>
       <v-row>
-        <v-col lg="6" md="6" sm="12">
+        <v-col cols="12" md="6" sm="6">
           <v-card flat>
             <v-card-title>
               <p>Account balance</p>
@@ -28,27 +30,27 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col md="3" sm="12">
+        <v-col md="3">
           <v-card flat class="wallet-card">
-            <card-avatar :icon="'mdi-hand-coin'"></card-avatar>
-            <v-card-text class="wallet-text">
-              <h5>Apply for Loan</h5>
-            </v-card-text>
+            <card-avatar
+              class="wallet-avatar"
+              :icon="'mdi-hand-coin'"
+            ></card-avatar>
+            <h5 class="wallet-text">Apply for Loan</h5>
           </v-card>
         </v-col>
-        <v-col md="3" sm="12">
+        <v-col md="3" sm="6">
           <v-card flat class="wallet-card">
             <card-avatar :icon="'mdi-swap-horizontal'"></card-avatar>
-            <v-card-text class="wallet-text">
-              <h5>Send Money</h5>
-            </v-card-text>
+
+            <h5 class="wallet-text">Send Money</h5>
           </v-card>
         </v-col>
       </v-row>
     </section>
     <section class="block">
       <h3>Coming features</h3>
-      <v-row class="d-flex" justify="space-between">
+      <v-row justify="space-between">
         <v-col md="2">
           <v-card flat class="features__card">
             <card-avatar
@@ -151,13 +153,16 @@ export default {
 .wallet-card {
   min-height: 17.5rem;
   display: flex;
+  flex-direction: column;
 }
 
 .wallet-text {
   align-self: center;
+  justify-self: center;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .acc__bal {
   font-size: 3rem;
 }

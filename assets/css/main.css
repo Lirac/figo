@@ -17,8 +17,13 @@ h1,h2,h3,h4,h5 {
   width: 100%;
   background-color: rgb(64,71,109) !important;
   color: #fff !important;
-
   padding: 1rem 0.5rem;
   font-weight: 300;
   border-radius: 0.8rem !important;
+}
+
+@media (min-width: 600px) {
+  .banner {
+    display: flex;
+  }
 }
