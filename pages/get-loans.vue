@@ -277,7 +277,7 @@
                     <v-col md="5" offset-md="1" class="d-flex align-end">
                       <v-btn
                         color="#86b052"
-                        class="text-capitalize"
+                        class="text-capitalize white--text"
                         depressed
                         @click="e1 = 1"
                       >
