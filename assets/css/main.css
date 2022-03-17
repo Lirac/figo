@@ -1,15 +1,16 @@
 :root {
   --color-heading: #3f4f80
 }
-h2,h3,h4,h5 {
-  color: var(--color-heading)
+h1,h2,h3,h4,h5 {
+  color: var(--color-heading);
+  margin: 1rem 0;
 }
 /* Banner */
 .banner {
   width: 100%;
   background-color: rgb(64,71,109) !important;
   color: #fff !important;
-  margin: 1.2rem 0;
+
   padding: 1rem 0.5rem;
   font-weight: 300;
   border-radius: 0.8rem !important;
