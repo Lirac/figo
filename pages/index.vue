@@ -9,7 +9,7 @@
       <h3>Your wallet</h3>
       <v-row>
         <v-col md="6" class="sm-12">
-          <v-card elevation="1">
+          <v-card flat>
             <v-card-title>
               <p>Account balance</p>
             </v-card-title>
@@ -25,7 +25,7 @@
           </v-card>
         </v-col>
         <v-col md="3" sm="12">
-          <v-card class="wallet-card">
+          <v-card flat class="wallet-card">
             <card-avatar :icon="'mdi-hand-coin'"></card-avatar>
             <v-card-text class="wallet-text">
               <h5>Apply for Loan</h5>
@@ -33,11 +33,96 @@
           </v-card>
         </v-col>
         <v-col md="3" sm="12">
-          <v-card class="wallet-card">
+          <v-card flat class="wallet-card">
             <card-avatar :icon="'mdi-swap-horizontal'"></card-avatar>
             <v-card-text class="wallet-text">
-              <h5>Send money</h5>
+              <h5>Send Money</h5>
             </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </section>
+    <section class="block">
+      <h3>Coming features</h3>
+      <v-row class="d-flex" justify="space-between">
+        <v-col md="2">
+          <v-card flat>
+            <card-avatar
+              avatar-color="#dfdfdf"
+              size="30"
+              icon-color="#b5b6b3"
+              :icon="'mdi-swap-horizontal'"
+            ></card-avatar>
+            <v-card-text>
+              <p class="text-center features__text">Investment</p>
+            </v-card-text>
+            <div class="feature-action text-center">
+              <p class="pa-0 ma-0 caption">Coming Soon</p>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col md="2">
+          <v-card flat>
+            <card-avatar
+              avatar-color="#dfdfdf"
+              size="30"
+              icon-color="#b5b6b3"
+              :icon="'mdi-piggy-bank'"
+            ></card-avatar>
+            <v-card-text>
+              <p class="text-center features__text">Savings</p>
+            </v-card-text>
+            <div class="feature-action text-center">
+              <p class="pa-0 ma-0 caption">Coming Soon</p>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col md="2">
+          <v-card flat>
+            <card-avatar
+              avatar-color="#dfdfdf"
+              size="30"
+              icon-color="#b5b6b3"
+              :icon="'mdi-cart'"
+            ></card-avatar>
+            <v-card-text>
+              <p class="text-center features__text">Buy Now pay later</p>
+            </v-card-text>
+            <div class="feature-action text-center">
+              <p class="pa-0 ma-0 caption">Coming Soon</p>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col md="2">
+          <v-card flat>
+            <card-avatar
+              avatar-color="#dfdfdf"
+              size="30"
+              icon-color="#b5b6b3"
+              :icon="'mdi-credit-card'"
+            ></card-avatar>
+            <v-card-text>
+              <p class="text-center features__text">Pay Bills</p>
+            </v-card-text>
+            <div class="feature-action text-center">
+              <p class="pa-0 ma-0 caption">Coming Soon</p>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col md="2">
+          <v-card flat>
+            <card-avatar
+              avatar-color="#dfdfdf"
+              size="30"
+              icon-color="#b5b6b3"
+              :icon="'mdi-cellphone'"
+            ></card-avatar>
+            <v-card-text>
+              <p class="text-center features__text">Airtime</p>
+            </v-card-text>
+            <div class="feature-action text-center">
+              <p class="pa-0 ma-0 caption">Coming Soon</p>
+            </div>
           </v-card>
         </v-col>
       </v-row>
@@ -81,5 +166,14 @@ export default {
 }
 .block {
   margin: 5rem 0;
+}
+.feature-action {
+  background: #dfdfdf;
+  padding: 0.1rem;
+  color: var(--color-heading);
+}
+.features__text {
+  opacity: 0.6;
+  font-weight: 500;
 }
 </style>

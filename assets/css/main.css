@@ -1,9 +1,16 @@
 :root {
-  --color-heading: #3f4f80
+  --color-heading: #3f4f80;
+  --color-gray: #dfdfdf;
+  --app-green: #86b052;
+  --app-background: #ededed
 }
 h1,h2,h3,h4,h5 {
   color: var(--color-heading);
   margin: 1rem 0;
+}
+
+.page {
+  background: #ededed;
 }
 /* Banner */
 .banner {

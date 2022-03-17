@@ -32,7 +32,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main class="page">
       <v-container class="page-container">
         <nuxt />
       </v-container>
@@ -66,12 +66,12 @@ export default {
         {
           icon: 'mdi-hand-coin',
           title: 'Get Loans',
-          to: '/inspire',
+          to: '/get-loans',
         },
         {
           icon: 'mdi-send',
           title: 'Transfer Money',
-          to: '#',
+          to: '/inspire',
         },
         {
           icon: 'mdi-piggy-bank',
