@@ -14,9 +14,13 @@
               <p>Account balance</p>
             </v-card-title>
             <v-card-text>
-              <h1 class="acc__bal">0.00</h1>
+              <h1 v-if="!hide" class="acc__bal">0.00</h1>
+              <h1 v-if="hide" class="acc__bal">X.XX</h1>
               <p class="balance__label">Hide balance</p>
-              <v-switch class="d-inline-flex balance-switch"></v-switch>
+              <v-switch
+                v-model="hide"
+                class="d-inline-flex balance-switch"
+              ></v-switch>
               <div class="d-flex align-center mt-10 mb-4">
                 <span class="mr-4 acc-num">Account no: 04675932367</span>
                 <v-icon color="#3f4f80">mdi-credit-card-chip</v-icon>
@@ -135,6 +139,11 @@ import welcomeBanner from '~/components/welcome-banner.vue'
 import cardAvatar from '~/components/card-avatar.vue'
 export default {
   components: [welcomeBanner, cardAvatar],
+  data: () => {
+    return {
+      hide: false,
+    }
+  },
 }
 </script>
 
