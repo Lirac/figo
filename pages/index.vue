@@ -13,7 +13,7 @@
         <v-col cols="12" md="6" sm="6">
           <v-card flat>
             <v-card-title>
-              <p>Account balance</p>
+              <h4 class="bal__heading">Account balance</h4>
             </v-card-title>
             <v-card-text>
               <h1 v-if="!hide" class="acc__bal">0.00</h1>
@@ -51,7 +51,7 @@
     <section class="block">
       <h3>Coming features</h3>
       <v-row justify="space-between">
-        <v-col md="2">
+        <v-col cols="6" sm="6" md="2">
           <v-card flat class="features__card">
             <card-avatar
               avatar-color="#dfdfdf"
@@ -67,7 +67,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col md="2">
+        <v-col cols="6" sm="6" md="2">
           <v-card flat class="features__card">
             <card-avatar
               avatar-color="#dfdfdf"
@@ -83,7 +83,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col md="2" class="coming-soon">
+        <v-col cols="6" sm="6" md="2" class="coming-soon">
           <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
@@ -99,7 +99,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col md="2">
+        <v-col cols="6" sm="6" md="2">
           <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
@@ -115,7 +115,7 @@
             </div>
           </v-card>
         </v-col>
-        <v-col md="2">
+        <v-col cols="6" sm="6" md="2">
           <v-card class="features__card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
@@ -165,6 +165,13 @@ export default {
 
 .acc__bal {
   font-size: 3rem;
+}
+
+.bal__heading {
+  color: #000;
+  opacity: 0.5;
+  padding: 0;
+  margin: 0.5rem 0;
 }
 .balance__label {
   display: inline !important;

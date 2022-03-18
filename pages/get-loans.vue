@@ -38,7 +38,7 @@
             <v-stepper-content step="1">
               <v-card flat class="mb-12 stepper__content">
                 <v-form>
-                  <v-row class="mt-4">
+                  <v-row dense class="mt-4">
                     <v-col cols="12" md="6">
                       <v-col cols="12">
                         <label class="input__label">Full name *</label>
@@ -50,7 +50,7 @@
                         </v-text-field>
                       </v-col>
 
-                      <v-col cols="12">
+                      <v-col cols="12" class="mb-10">
                         <label class="input__label" for="">Gender *</label>
                         <v-btn-toggle
                           mandatory
@@ -93,7 +93,7 @@
                       </v-col>
                     </v-col>
                     <v-col cols="12" md="6">
-                      <v-col cols="12">
+                      <v-col cols="12" class="mb-8">
                         <label class="input__label" for=""
                           >Email Address *</label
                         >
