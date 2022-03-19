@@ -31,17 +31,20 @@
           </v-card>
         </v-col>
         <v-col md="3">
-          <v-card flat class="wallet-card">
+          <v-card flat class="wallet-action__card">
             <card-avatar
-              class="wallet-avatar"
+              class="wallet-action__icon"
               :icon="'mdi-hand-coin'"
             ></card-avatar>
             <h5 class="wallet-text">Apply for Loan</h5>
           </v-card>
         </v-col>
         <v-col md="3" sm="6">
-          <v-card flat class="wallet-card">
-            <card-avatar :icon="'mdi-swap-horizontal'"></card-avatar>
+          <v-card flat class="wallet-action__card">
+            <card-avatar
+              class="wallet-action__icon"
+              :icon="'mdi-swap-horizontal'"
+            ></card-avatar>
 
             <h5 class="wallet-text">Send Money</h5>
           </v-card>
@@ -150,17 +153,12 @@ export default {
 </script>
 
 <style scoped>
-.wallet-card {
-  min-height: 17.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .wallet-text {
   align-self: center;
   justify-self: center;
   font-size: 1rem;
   font-weight: 500;
+  margin: 0;
 }
 
 .acc__bal {
@@ -205,5 +203,18 @@ export default {
   height: 100%;
   overflow: hidden;
   justify-content: space-between;
+}
+
+.wallet-action__card {
+  height: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wallet-action__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 </style>
