@@ -50,7 +50,7 @@
                         </v-text-field>
                       </v-col>
 
-                      <v-col cols="12" class="mb-10">
+                      <v-col cols="12">
                         <label class="input__label" for="">Gender *</label>
                         <v-btn-toggle
                           mandatory
@@ -93,7 +93,7 @@
                       </v-col>
                     </v-col>
                     <v-col cols="12" md="6">
-                      <v-col cols="12" class="mb-8">
+                      <v-col cols="12">
                         <label class="input__label" for=""
                           >Email Address *</label
                         >
@@ -175,7 +175,7 @@
                         </v-col>
                       </v-row>
                     </v-col>
-                    <v-col md="5" offset-md="1">
+                    <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
                           <label class="input__label" for=""
@@ -251,7 +251,7 @@
             <v-stepper-content step="3">
               <v-card flat class="mb-12 stepper__content">
                 <v-form>
-                  <v-row class="mt-6">
+                  <v-row dense class="mt-6">
                     <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
