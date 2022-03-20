@@ -33,7 +33,7 @@
         <v-col md="3">
           <v-card flat class="wallet-action__card">
             <card-avatar
-              class="wallet-action__icon"
+              class="card-icon"
               :icon="'mdi-hand-coin'"
             ></card-avatar>
             <h5 class="wallet-text">Apply for Loan</h5>
@@ -42,7 +42,7 @@
         <v-col md="3" sm="6">
           <v-card flat class="wallet-action__card">
             <card-avatar
-              class="wallet-action__icon"
+              class="card-icon"
               :icon="'mdi-swap-horizontal'"
             ></card-avatar>
 
@@ -53,83 +53,88 @@
     </section>
     <section class="block">
       <h3>Coming features</h3>
-      <v-row justify="space-between">
+      <v-row justify="space-between" dense>
         <v-col cols="6" sm="6" md="2">
-          <v-card flat class="features__card">
+          <v-card flat class="features-card">
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
               icon-color="#b5b6b3"
               :icon="'mdi-swap-horizontal'"
+              class="card-icon"
             ></card-avatar>
-            <v-card-text>
-              <p class="text-center features__text">Investment</p>
+            <v-card-text class="features-card__body">
+              <p class="text-center features-card__text">Investment</p>
             </v-card-text>
-            <div class="feature-action text-center">
+            <div class="feature-card__footer text-center">
               <p class="pa-0 ma-0 caption">Coming Soon</p>
             </div>
           </v-card>
         </v-col>
         <v-col cols="6" sm="6" md="2">
-          <v-card flat class="features__card">
+          <v-card flat class="features-card">
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
               icon-color="#b5b6b3"
               :icon="'mdi-piggy-bank'"
+              class="card-icon"
             ></card-avatar>
-            <v-card-text>
-              <p class="text-center features__text">Savings</p>
+            <v-card-text class="features-card__body">
+              <p class="text-center features-card__text">Savings</p>
             </v-card-text>
-            <div class="feature-action text-center">
+            <div class="feature-card__footer text-center">
               <p class="pa-0 ma-0 caption">Coming Soon</p>
             </div>
           </v-card>
         </v-col>
         <v-col cols="6" sm="6" md="2" class="coming-soon">
-          <v-card class="features__card" flat>
+          <v-card class="features-card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
               icon-color="#b5b6b3"
               :icon="'mdi-cart'"
+              class="card-icon"
             ></card-avatar>
-            <v-card-text>
-              <p class="text-center features__text">Buy Now pay later</p>
+            <v-card-text class="features-card__body">
+              <p class="text-center features-card__text">Buy Now pay later</p>
             </v-card-text>
-            <div class="feature-action text-center">
+            <div class="feature-card__footer text-center">
               <p class="pa-0 ma-0 caption">Coming Soon</p>
             </div>
           </v-card>
         </v-col>
         <v-col cols="6" sm="6" md="2">
-          <v-card class="features__card" flat>
+          <v-card class="features-card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
               icon-color="#b5b6b3"
               :icon="'mdi-credit-card'"
+              class="card-icon"
             ></card-avatar>
-            <v-card-text>
-              <p class="text-center features__text">Pay Bills</p>
+            <v-card-text class="features-card__body">
+              <p class="text-center features-card__text">Pay Bills</p>
             </v-card-text>
-            <div class="feature-action text-center">
+            <div class="feature-card__footer text-center">
               <p class="pa-0 ma-0 caption">Coming Soon</p>
             </div>
           </v-card>
         </v-col>
         <v-col cols="6" sm="6" md="2">
-          <v-card class="features__card" flat>
+          <v-card class="features-card" flat>
             <card-avatar
               avatar-color="#dfdfdf"
               size="30"
               icon-color="#b5b6b3"
               :icon="'mdi-cellphone'"
+              class="card-icon"
             ></card-avatar>
-            <v-card-text>
-              <p class="text-center features__text">Airtime</p>
+            <v-card-text class="features-card__body">
+              <p class="text-center features-card__text">Airtime</p>
             </v-card-text>
-            <div class="feature-action text-center">
+            <div class="feature-card__footer text-center">
               <p class="pa-0 ma-0 caption">Coming Soon</p>
             </div>
           </v-card>
@@ -186,25 +191,6 @@ export default {
 .block {
   margin: 5rem 0;
 }
-.feature-action {
-  background: #dfdfdf;
-  color: var(--color-heading);
-  justify-self: flex-end;
-}
-.features__text {
-  opacity: 0.6;
-  font-weight: 500;
-  justify-content: center;
-}
-
-.features__card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  justify-content: space-between;
-}
-
 .wallet-action__card {
   height: 17.5rem;
   display: flex;
@@ -212,9 +198,32 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.wallet-action__icon {
+.card-icon {
   position: absolute;
   left: 0;
   top: 0;
+}
+.features-card {
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+}
+.feature-card__footer {
+  flex: 0 0 10px;
+  background: #dfdfdf;
+  text-align: center;
+}
+.features-card__text {
+  opacity: 0.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.features-card__body {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 </style>
