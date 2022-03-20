@@ -4,6 +4,17 @@
   --app-green: #86b052;
   --app-background: #ededed
 }
+
+
+@font-face {
+  font-family: 'Inter';
+  src: local("Inter"), url('~/assets/fonts/inter/Inter-Regular.ttf')  format('truetype');
+}
+
+html, .v-application{
+  font-family: Inter, sans-serif !important;
+}
+
 h1,h2,h3,h4,h5 {
   color: var(--color-heading);
   margin: 1rem 0;
